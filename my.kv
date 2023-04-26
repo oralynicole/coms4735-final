@@ -1,0 +1,41 @@
+WindowManager:
+    LoginWindow:
+    ImageCaptureWindow:
+    VerificationWindow:
+    ConfirmationWindow:
+
+<ImageCaptureWindow>: 
+    name: "camera"
+
+    GridLayout:
+        cols: 1
+
+        GridLayout: 
+            cols: 2
+
+            Label:
+                text: "Email: "
+            
+            TextInput: 
+                id: email
+                multiline: False
+
+            Label: 
+                text: "Password: "
+            
+            TextInput:
+                id: passw
+                multiline: False
+            
+        Button: 
+            text: "Submit"
+            on_release: 
+                app.root.current = "camera"
+                root.manager.transition.direction = "left"
+
+
+<VerficationWindow>: 
+    name: "verification"
+
+<ConfirmationWindow>:
+    name: "confirmation"
